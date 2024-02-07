@@ -1,6 +1,6 @@
 import PyPDF2
-# Specify the path to the PDF file
-path = "/Users/abraham/Documents/p-ms1.pdf"
+# Get the path of the PDF file from the user
+path = input("Enter the path of the PDF file: ")
 texts = []
 # Open the PDF file in read binary mode
 with open(path, "rb") as file:
@@ -22,7 +22,7 @@ with open(path, "rb") as file:
         if line.find("-") != -1:
             name = line[line.find("-")+5:line.find(",")]
             if len(name.split(" ")) < 3 and len(name.split(" ")) > 1:
-                number = line[0:line.find("-")+4]
+                number = line[0:line.find("-")+5]
                 for char in number:
                     if char.isdigit() == False and char != "+":
                         number = number.replace(char, "")
