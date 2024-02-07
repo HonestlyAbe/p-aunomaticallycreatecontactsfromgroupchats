@@ -1,6 +1,6 @@
 import PyPDF2
 # Get the path of the PDF file from the user
-def __main__():
+def main():
     path = input("Enter the path of the PDF file: ")
     texts = []
     # Open the PDF file in read binary mode
@@ -55,6 +55,7 @@ def __main__():
 
 
 
-
+if __name__ == "__main__":
+    main()
 
 
